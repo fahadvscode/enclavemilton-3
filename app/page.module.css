@@ -20,11 +20,12 @@
     rgba(26, 61, 46, 0.55) 45%,
     rgba(26, 61, 46, 0.25) 100%
   );
+  z-index: 1;
 }
 
 .heroContent {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 6rem 0 4rem;
   max-width: 36rem;
   color: var(--color-warm-white);
@@ -55,7 +56,7 @@
 }
 
 .from {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), Georgia, serif;
   font-size: 2rem;
   color: var(--color-gold);
   font-weight: 600;
@@ -72,7 +73,6 @@
   background: var(--color-forest);
   color: var(--color-warm-white);
   padding: 2rem 0;
-  margin-top: -1px;
 }
 
 .statsList {
@@ -93,7 +93,7 @@
 
 .statsList strong {
   display: block;
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), Georgia, serif;
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--color-gold);
@@ -120,45 +120,45 @@
 
 .collectionCard {
   display: flex;
-  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
   text-decoration: none;
   background: var(--color-warm-white);
   border-radius: var(--radius);
-  overflow: hidden;
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
 .collectionCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(26, 61, 46, 0.14);
+  transform: translateY(-3px);
+  border-color: var(--color-gold);
+  box-shadow: 0 16px 48px rgba(26, 61, 46, 0.12);
 }
 
-.collectionImage {
-  position: relative;
-  aspect-ratio: 16 / 10;
-}
-
-.collectionImg {
-  object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.collectionCard:hover .collectionImg {
-  transform: scale(1.04);
-}
-
-.collectionBody {
-  padding: 1.5rem 1.75rem 1.75rem;
+.collectionIcon {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-warm-white);
+  background: var(--color-forest);
+  border-radius: 10px;
 }
 
 .collectionBody h3 {
-  margin: 0.75rem 0 0.35rem;
-  font-size: 1.5rem;
+  margin: 0.5rem 0 0.35rem;
+  font-size: 1.4rem;
 }
 
 .collectionBody p {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   color: var(--color-stone);
   font-size: 0.9375rem;
 }
@@ -169,73 +169,19 @@
   color: var(--color-forest-light);
 }
 
-.lifestyle {
-  position: relative;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-}
-
-.lifestyleBg {
-  object-fit: cover;
-}
-
-.lifestyleOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(26, 61, 46, 0.72);
-}
-
-.lifestyleContent {
-  position: relative;
-  z-index: 1;
-  padding: 4rem 0;
-  text-align: center;
-  color: var(--color-warm-white);
-  max-width: 36rem;
-}
-
-.lifestyleContent h2 {
-  color: var(--color-warm-white);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  margin: 0 0 1rem;
-}
-
-.lifestyleContent p {
-  font-size: 1.125rem;
-  margin: 0 0 1.75rem;
-  opacity: 0.92;
-}
-
-.whyGrid {
-  display: grid;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .whyGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-}
-
-.whyImage {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-}
-
-.whyImg {
-  object-fit: cover;
-}
-
 .highlights {
   list-style: none;
   margin: 0 0 2rem;
   padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
 .highlights li {
@@ -243,14 +189,17 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.highlights li:last-child {
-  border-bottom: none;
+@media (min-width: 768px) {
+  .highlights li {
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 .highlights strong {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.2rem;
   color: var(--color-forest);
   margin-bottom: 0.35rem;
 }
@@ -258,4 +207,10 @@
 .highlights span {
   color: var(--color-stone);
   font-size: 0.9375rem;
+}
+
+.whyCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

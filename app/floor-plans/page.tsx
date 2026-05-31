@@ -36,8 +36,8 @@ export default function FloorPlansPage() {
       />
 
       <PageBanner
-        src={IMAGES.floorPlansBanner}
-        alt="The Enclave Milton floor plans — new townhomes"
+        src={IMAGES.hero}
+        alt="The Enclave Milton — Sundial Homes community"
         priority
       >
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">

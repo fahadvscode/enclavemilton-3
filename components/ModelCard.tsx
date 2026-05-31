@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Collection, FloorPlanModel } from "@/lib/types";
 import { formatModelType, formatSqft } from "@/lib/floor-plans";
 import { useRegistration } from "./RegistrationContext";
-import { ModelPlanImage } from "./ModelPlanImage";
+import { FloorPlanPlaceholder } from "./FloorPlanPlaceholder";
 import styles from "./ModelCard.module.css";
 
 interface ModelCardProps {
@@ -17,11 +17,12 @@ export function ModelCard({ model, collection }: ModelCardProps) {
   const typeLabel = formatModelType(model, collection.id);
   const sqftLabel = formatSqft(model);
   const shortName = model.model.replace("The ", "");
+  const seed = (model.sqft ?? model.sqftMin ?? 0) + model.slug.length;
 
   return (
     <article className={styles.card}>
       <Link href={`/floor-plans/${model.slug}`} className={styles.thumbLink}>
-        <ModelPlanImage slug={model.slug} modelName={model.model} />
+        <FloorPlanPlaceholder modelName={model.model} seed={seed} />
       </Link>
       <div className={styles.body}>
         <h3 className={styles.title}>

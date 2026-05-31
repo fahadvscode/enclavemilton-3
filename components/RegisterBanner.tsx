@@ -1,8 +1,6 @@
 "use client";
 
 import { siteData } from "@/lib/floor-plans";
-import { IMAGES } from "@/lib/images";
-import { StockImage } from "./StockImage";
 import { useRegistration } from "./RegistrationContext";
 import styles from "./RegisterBanner.module.css";
 
@@ -12,15 +10,6 @@ export function RegisterBanner() {
 
   return (
     <section id="register" className={styles.banner}>
-      <StockImage
-        src={IMAGES.registerCta}
-        alt=""
-        fill
-        className={styles.bg}
-        sizes="100vw"
-        aria-hidden
-      />
-      <div className={styles.overlay} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <h2>Get full floor plans &amp; pricing</h2>
         <p>

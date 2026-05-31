@@ -4,6 +4,7 @@
   border-radius: 8px;
   overflow: hidden;
   background: var(--color-cream);
+  border: 1px solid var(--color-border);
 }
 
 .detail {
@@ -11,15 +12,12 @@
   border-radius: var(--radius);
 }
 
-.image {
-  object-fit: cover;
-}
-
-.blur {
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(10px) saturate(0.9);
-  background: rgba(26, 61, 46, 0.12);
+.svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: blur(5px);
+  transform: scale(1.06);
 }
 
 .badge {
@@ -33,7 +31,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-warm-white);
-  background: rgba(26, 61, 46, 0.75);
+  background: rgba(26, 61, 46, 0.8);
   border-radius: 4px;
 }
 
@@ -47,7 +45,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--color-forest);
-  background: rgba(253, 252, 250, 0.45);
+  background: rgba(247, 244, 239, 0.5);
 }

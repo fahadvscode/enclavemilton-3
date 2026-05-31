@@ -1,18 +1,47 @@
+"use client";
+
 import Image, { type ImageProps } from "next/image";
+import { useState } from "react";
+import styles from "./StockImage.module.css";
 
 type StockImageProps = Omit<ImageProps, "alt"> & {
   alt: string;
   priority?: boolean;
+  fallbackLabel?: string;
 };
 
-export function StockImage({ alt, className, priority, ...props }: StockImageProps) {
+export function StockImage({
+  alt,
+  className,
+  priority,
+  fallbackLabel,
+  fill,
+  ...props
+}: StockImageProps) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <div
+        className={`${styles.fallback} ${className ?? ""}`}
+        role="img"
+        aria-label={alt}
+      >
+        <span>{fallbackLabel ?? alt}</span>
+      </div>
+    );
+  }
+
   return (
-    <Image
-      alt={alt}
-      className={className}
-      priority={priority}
-      sizes={props.sizes ?? "(max-width: 768px) 100vw, 50vw"}
-      {...props}
-    />
+    <div className={fill ? styles.fillWrap : styles.wrap}>
+      <Image
+        alt={alt}
+        className={className}
+        priority={priority}
+        fill={fill}
+        onError={() => setFailed(true)}
+        {...props}
+      />
+    </div>
   );
 }

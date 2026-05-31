@@ -1,26 +1,13 @@
 .banner {
-  position: relative;
   padding: 5rem 0;
-  overflow: hidden;
-}
-
-.bg {
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(26, 61, 46, 0.92) 0%,
-    rgba(26, 61, 46, 0.78) 100%
+    var(--color-forest) 0%,
+    var(--color-forest-light) 100%
   );
 }
 
 .inner {
-  position: relative;
-  z-index: 1;
   text-align: center;
   color: var(--color-warm-white);
   max-width: 32rem;

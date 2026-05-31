@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Collection, FloorPlanModel } from "@/lib/types";
 import { siteData } from "@/lib/floor-plans";
 import { useRegistration } from "./RegistrationContext";
-import { ModelPlanImage } from "./ModelPlanImage";
+import { FloorPlanPlaceholder } from "./FloorPlanPlaceholder";
 import styles from "./ModelDetail.module.css";
 
 interface ModelDetailProps {
@@ -17,13 +17,14 @@ interface ModelDetailProps {
 export function ModelDetail({ model, collection, typeLabel, sqftLabel }: ModelDetailProps) {
   const { openRegistration } = useRegistration();
   const shortName = model.model.replace("The ", "");
+  const seed = (model.sqft ?? model.sqftMin ?? 0) + model.slug.length;
 
   return (
     <article className={styles.article}>
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.visual}>
-            <ModelPlanImage slug={model.slug} modelName={model.model} variant="detail" />
+            <FloorPlanPlaceholder modelName={model.model} seed={seed} variant="detail" />
           </div>
           <div className={styles.content}>
             <span className="badge">{collection.name}</span>

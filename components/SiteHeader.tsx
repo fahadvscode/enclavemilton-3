@@ -3,9 +3,10 @@ import styles from "./SiteHeader.module.css";
 
 const nav = [
   { href: "/", label: "Home" },
+  { href: "/#location", label: "Location" },
   { href: "/floor-plans", label: "Floor Plans" },
-  { href: "/floor-plans#village", label: "Village Collection" },
-  { href: "/floor-plans#park", label: "Park Collection" },
+  { href: "/floor-plans#village", label: "Village" },
+  { href: "/floor-plans#park", label: "Park" },
 ];
 
 export function SiteHeader() {

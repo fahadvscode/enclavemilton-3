@@ -1,27 +1,6 @@
 .header {
-  display: grid;
-  gap: 2rem;
   margin-bottom: 2.5rem;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .header {
-    grid-template-columns: 280px 1fr;
-    gap: 2.5rem;
-  }
-}
-
-.headerImage {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-}
-
-.headerImg {
-  object-fit: cover;
+  max-width: 52rem;
 }
 
 .subtitle {
