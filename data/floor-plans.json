@@ -1,0 +1,46 @@
+{
+  "project": {
+    "name": "The Enclave",
+    "city": "Milton, Ontario",
+    "builder": "Sundial Homes",
+    "startingFrom": "$599,990",
+    "occupancy": "2027",
+    "noMaintenanceFees": true
+  },
+  "collections": [
+    {
+      "id": "village",
+      "name": "The Village Collection",
+      "type": "Freehold Back-to-Back Townhomes",
+      "tagline": "No Monthly Maintenance Fees",
+      "description": "The Village Collection at The Enclave offers freehold back-to-back townhomes with no monthly maintenance fees — the most attainable way into Milton's newest Sundial Homes community. Five thoughtfully sized layouts from 953 to 1,732 sq ft suit first-time buyers, young families, and investors looking for low-maintenance freehold ownership. Register for the full Village Collection floor plans and current pricing.",
+      "models": [
+        { "model": "The Brighton", "slug": "the-brighton", "type": "Back-to-Back Townhome", "sqft": 953, "price": "On registration" },
+        { "model": "The Dover", "slug": "the-dover", "type": "Back-to-Back Townhome", "sqft": 1206, "price": "On registration" },
+        { "model": "The Durham", "slug": "the-durham", "type": "Back-to-Back Townhome", "sqft": 1309, "price": "On registration" },
+        { "model": "The Oxford", "slug": "the-oxford", "type": "Back-to-Back Townhome (End Unit)", "sqft": 1442, "price": "On registration" },
+        { "model": "The York", "slug": "the-york", "type": "Back-to-Back Townhome (Corner)", "sqft": 1732, "price": "On registration" }
+      ]
+    },
+    {
+      "id": "park",
+      "name": "The Park Collection",
+      "type": "Freehold 2 & 3 Storey Traditional Townhomes",
+      "tagline": "No Monthly Maintenance Fees",
+      "description": "The Park Collection features freehold traditional townhomes in two and three storey designs, ranging from 1,240 to 2,843 sq ft. With layouts scaled for growing and multigenerational families — including spacious three-storey end and corner homes — and no monthly maintenance fees, the Park Collection delivers detached-style space at townhome value in southeast Milton. Register for the complete Park Collection floor plans and pricing.",
+      "footnote": "Square-foot ranges reflect different elevations of the same model across blocks.",
+      "models": [
+        { "model": "The Burgess", "slug": "the-burgess", "storeys": 2, "sqft": 1240, "price": "On registration" },
+        { "model": "The Greenwich", "slug": "the-greenwich", "storeys": 2, "sqftMin": 1355, "sqftMax": 1364, "price": "On registration" },
+        { "model": "The Highgrove", "slug": "the-highgrove", "storeys": 2, "sqftMin": 1457, "sqftMax": 1462, "price": "On registration" },
+        { "model": "The Hyde", "slug": "the-hyde", "storeys": 2, "sqft": 1581, "price": "On registration" },
+        { "model": "The Apsley", "slug": "the-apsley", "storeys": 3, "sqft": 1838, "price": "On registration" },
+        { "model": "The Downing", "slug": "the-downing", "storeys": 3, "sqft": 1985, "price": "On registration" },
+        { "model": "The Knox", "slug": "the-knox", "storeys": 3, "sqft": 2179, "price": "On registration" },
+        { "model": "The Severs", "slug": "the-severs", "storeys": 3, "sqft": 2502, "type": "End Unit", "price": "On registration" },
+        { "model": "The Spencer", "slug": "the-spencer", "storeys": 3, "sqftMin": 2597, "sqftMax": 2599, "type": "End Unit", "price": "On registration" },
+        { "model": "The Walker", "slug": "the-walker", "storeys": 3, "sqft": 2843, "type": "Corner", "price": "On registration" }
+      ]
+    }
+  ]
+}
