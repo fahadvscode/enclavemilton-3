@@ -26,7 +26,7 @@ export function HomeLeadForm() {
       </h2>
       <p className={styles.subtitle}>
         New freehold townhomes in southeast Milton — register for instant access to layouts,
-        elevations, and current pricing from {siteData.project.builder}.
+        elevations, and current pricing information.
       </p>
 
       <ul className={styles.perks} aria-label="What you receive">

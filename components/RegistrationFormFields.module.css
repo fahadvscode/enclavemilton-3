@@ -26,11 +26,6 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form input::placeholder {
-  color: var(--color-stone-light);
-  opacity: 0.85;
-}
-
 .form input:focus,
 .form select:focus {
   outline: none;
@@ -69,6 +64,20 @@
   line-height: 1.5;
   color: var(--color-stone-light);
   margin: 0.875rem 0 0;
+}
+
+.disclaimer {
+  font-size: 0.625rem;
+  line-height: 1.55;
+  color: var(--color-stone-light);
+  margin: 0.65rem 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.disclaimer strong {
+  color: var(--color-stone);
+  font-weight: 600;
 }
 
 .submit {

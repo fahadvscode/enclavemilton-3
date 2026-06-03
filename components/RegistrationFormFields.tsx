@@ -96,20 +96,20 @@ export function RegistrationFormFields({
       <div className={styles.row}>
         <label>
           <span>First name</span>
-          <input name="firstName" type="text" required autoComplete="given-name" placeholder="Alex" />
+          <input name="firstName" type="text" required autoComplete="given-name" />
         </label>
         <label>
           <span>Last name</span>
-          <input name="lastName" type="text" required autoComplete="family-name" placeholder="Chen" />
+          <input name="lastName" type="text" required autoComplete="family-name" />
         </label>
       </div>
       <label>
         <span>Email</span>
-        <input name="email" type="email" required autoComplete="email" placeholder="you@email.com" />
+        <input name="email" type="email" required autoComplete="email" />
       </label>
       <label>
         <span>Phone</span>
-        <input name="phone" type="tel" required autoComplete="tel" placeholder="(416) 555-0100" />
+        <input name="phone" type="tel" required autoComplete="tel" />
       </label>
       <label>
         <span>Model of interest</span>
@@ -153,8 +153,16 @@ export function RegistrationFormFields({
       </button>
 
       <p className={styles.privacy}>
-        By registering, you agree to receive updates about The Enclave Milton by {siteData.project.builder}.
-        Pricing, deposits, and lot details are shared in your personalized follow-up.
+        By registering, you agree to receive community updates about The Enclave Milton. Pricing,
+        deposits, and lot details are shared in your personalized follow-up.
+      </p>
+      <p className={styles.disclaimer}>
+        <strong>Disclaimer:</strong> This website is not affiliated with, endorsed by, or
+        representing {siteData.project.builder} or any builder sales office. We are an independent
+        marketing and information service only. Renderings, pricing, availability, square footage,
+        and specifications are provided for general information and may change without notice. Not an
+        offering for sale. Confirm all details directly with {siteData.project.builder} or an
+        authorized sales representative.
       </p>
     </form>
   );

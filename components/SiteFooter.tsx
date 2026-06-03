@@ -25,6 +25,11 @@ export function SiteFooter() {
             </p>
           </div>
         </div>
+        <p className={styles.legalDisclaimer}>
+          This site is not affiliated with, endorsed by, or representing {project.builder}. All
+          trademarks and community names belong to their respective owners. Information is subject
+          to change without notice.
+        </p>
         <p className={styles.copy}>
           © {new Date().getFullYear()} {project.name} · {project.city}. All rights reserved.
         </p>
