@@ -31,11 +31,17 @@
   text-decoration: none;
 }
 
-.copy {
-  margin-top: 1.5rem;
+.disclaimer {
+  margin: 1.5rem 0 0;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.copy {
+  margin: 1rem 0 0;
   font-size: 0.8rem;
   color: #64748b;
 }

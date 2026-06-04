@@ -90,6 +90,11 @@ export const HOME_FAQ: FaqItem[] = [
       "Complete the registration form on this page with your contact details and model interest. You will receive floor plan PDFs and pricing information by email — check spam if nothing arrives within a few minutes.",
   },
   {
+    question: "Is this Sundial Homes' official website?",
+    answer:
+      "No. This is an independent marketing site for The Enclave Milton and is not the builder's official sales office. Sundial Homes operates sundialhomes.com — confirm all pricing, features, and availability directly with the builder.",
+  },
+  {
     question: "What schools are near The Enclave Milton?",
     answer:
       "The master plan includes a future on-site elementary school (subject to Halton District School Board approval). Nearby established schools include Viola Desmond, Ethel Gardiner, Hawthorne Village, Craig Kielburger, Milton District, and Catholic secondary options — verify catchment for your lot.",

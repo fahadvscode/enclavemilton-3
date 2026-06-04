@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NON_REPRESENTATION_DISCLAIMER } from "@/lib/site";
 import styles from "./SiteFooter.module.css";
 
 export default function SiteFooter() {
@@ -12,9 +13,9 @@ export default function SiteFooter() {
           <a href="#faq">FAQ</a>
           <a href="#register">Register</a>
         </nav>
+        <p className={styles.disclaimer}>{NON_REPRESENTATION_DISCLAIMER}</p>
         <p className={styles.copy}>
-          © {new Date().getFullYear()} The Enclave Milton. Built by Sundial Homes. Prices and
-          availability subject to change.
+          © {new Date().getFullYear()} The Enclave Milton. Built by Sundial Homes.
         </p>
       </div>
     </footer>
