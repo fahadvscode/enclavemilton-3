@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import MobileStickyCta from "@/components/MobileStickyCta";
@@ -7,16 +7,16 @@ import { buildMetadata, defaultDescription } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const sora = Sora({
+const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sora",
+  variable: "--font-fraunces",
 });
 
-const sourceSans = Source_Sans_3({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-source",
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-CA" className={`${sora.variable} ${sourceSans.variable}`}>
+    <html lang="en-CA" className={`${fraunces.variable} ${plusJakarta.variable}`}>
       <body>
         <TopNav />
         <main>{children}</main>

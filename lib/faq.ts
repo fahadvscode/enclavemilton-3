@@ -6,92 +6,91 @@ export const PRODUCT_FAQ: FaqItem[] = [
   {
     question: "What is The Enclave Milton?",
     answer:
-      "The Enclave Milton is a new freehold townhome community on Britannia Road in Milton, Ontario, built by Sundial Homes. It offers 15 floor plans across two collections — Village back-to-back towns and Park traditional towns — from $599,990 with $0 monthly maintenance and occupancy targeted for 2027. Homes are now selling.",
+      "The Enclave is Sundial Homes' new freehold townhome address on Britannia Road in Milton, Ontario. Fifteen floor plans split between Village back-to-back layouts and Park traditional two- and three-storey homes start from $599,990 with $0 monthly maintenance and 2027 occupancy. Sales are open now.",
   },
   {
-    question: "Who is the builder of The Enclave Milton?",
+    question: "Who builds The Enclave Milton?",
     answer:
-      "Sundial Homes is the builder of The Enclave Milton — an established Ontario new-home builder delivering the Village and Park townhome collections in Milton.",
+      "Sundial Homes — an established Ontario new-home builder — develops The Enclave's Village and Park townhome collections in southeast Milton.",
   },
   {
-    question: "Where is The Enclave Milton located?",
+    question: "Where exactly is The Enclave in Milton?",
     answer:
-      "The community is on Britannia Road, between James Snow Parkway and Fourth Line, in Milton, Ontario (Halton Region). The address positions buyers near Highways 401 and 407 and Milton GO for GTA commuting.",
+      "Britannia Road between James Snow Parkway and Fourth Line in southeast Milton, Halton Region, Ontario, Canada. The site offers quick ties to Highway 401, Highway 407, and Milton GO for GTA commuters.",
   },
   {
-    question: "How much do townhomes at The Enclave Milton cost?",
+    question: "What are prices at The Enclave Milton?",
     answer:
-      "Pricing starts from $599,990 before upgrades and closing costs. Per-model pricing is released on registration — submit the form on this page for current floor plans and price sheets.",
+      "Marketing lists homes from $599,990 before upgrades and closing costs. Model-specific pricing, elevations, and lot premiums are shared when you register on this site.",
   },
   {
-    question: "Are there monthly maintenance or condo fees?",
+    question: "Do Enclave townhomes charge monthly maintenance fees?",
     answer:
-      "No. These are freehold townhomes with $0 monthly maintenance fees — you own the land and structure without ongoing condo-style common-element charges on the marketing materials provided.",
+      "No monthly maintenance fees are marketed on either collection — these are freehold townhomes, so you hold title without the recurring condo-style common-element charges typical of condominium towns.",
   },
   {
-    question: "What is the difference between the Village and Park collections?",
+    question: "How do Village and Park collections differ?",
     answer:
-      "The Village Collection has five freehold back-to-back townhome layouts from about 953 to 1,732 sq ft — efficient footprints ideal for first-time buyers and investors. The Park Collection has ten traditional two- and three-storey townhomes from about 1,240 to 2,843 sq ft for families wanting more space and storey options.",
+      "Village delivers five back-to-back freehold layouts from about 953 to 1,732 sq ft — efficient footprints for first-time buyers and investors. Park offers ten traditional two- and three-storey designs from about 1,240 to 2,843 sq ft, including select end and corner units.",
   },
   {
-    question: "How many floor plans are available?",
-    answer:
-      "There are 15 models total: five in the Village Collection and ten in the Park Collection.",
+    question: "How many models can I choose from?",
+    answer: "Fifteen in total: five Village models and ten Park models.",
   },
   {
-    question: "When is occupancy or closing?",
+    question: "When can buyers move in?",
     answer:
-      "Occupancy is currently communicated for 2027. Exact closing dates vary by model, phase, and purchase agreement — confirm timing when you register for details.",
+      "Occupancy is communicated for 2027. Exact closing dates depend on model, phase, and your agreement of purchase and sale — confirm timing when you register.",
   },
   {
-    question: "What sizes and storeys are offered?",
+    question: "What square footage and storey options exist?",
     answer:
-      "Village models range roughly 953–1,732 sq ft in back-to-back layouts. Park models span roughly 1,240–2,843 sq ft across two- and three-storey traditional townhome designs, including end and corner units on select plans.",
+      "Village spans roughly 953–1,732 sq ft in back-to-back form. Park spans roughly 1,240–2,843 sq ft across two- and three-storey traditional townhome designs.",
   },
   {
-    question: "Is this a condo or freehold ownership?",
+    question: "Is ownership freehold or condominium?",
     answer:
-      "These are freehold townhomes. Freehold means you hold title to your unit and land interest without the condo corporation fee structure typical of condominium townhomes — here, marketing highlights $0 monthly maintenance.",
+      "Freehold. You own your unit and land interest without a condo corporation fee structure — marketing highlights $0 monthly maintenance on both collections.",
   },
   {
-    question: "What deposits are typical for pre-construction?",
+    question: "How are pre-construction deposits structured?",
     answer:
-      "Pre-construction deposits are usually structured in installments tied to agreement milestones rather than one lump sum at signing. Exact schedules are builder-specific — request the current deposit outline when you register.",
+      "Deposits are usually paid in installments tied to agreement milestones rather than one lump sum at signing. Request the current schedule from the builder when you register.",
   },
   {
-    question: "What is the Tarion warranty?",
+    question: "What is Tarion warranty coverage?",
     answer:
-      "New homes from Ontario builders enrolled with Tarion are covered under the statutory new-home warranty program, including defined coverage periods for defects and delays. Confirm enrollment and coverage details in your purchase agreement.",
+      "New Ontario homes from enrolled builders carry Tarion's statutory warranty — defined periods for defects, delays, and other protections. Confirm enrollment in your purchase agreement.",
   },
   {
-    question: "What is the 10-day cooling-off period?",
+    question: "Is there a cooling-off period on freehold townhomes?",
     answer:
-      "For eligible condominium purchases in Ontario, buyers may have a statutory cooling-off right — freehold townhome contracts differ. Your agreement of purchase and sale governs rescission rights; review it with a lawyer before signing.",
+      "Statutory condominium rescission rights do not automatically apply to freehold townhome contracts. Your agreement of purchase and sale governs any rescission — review it with a lawyer before signing.",
   },
   {
-    question: "Is there an HST rebate for new homes?",
+    question: "Can buyers claim HST rebates on new homes?",
     answer:
-      "Eligible buyers of new homes in Ontario may qualify for federal and provincial new housing rebates on the HST portion, subject to price caps and occupancy rules. Speak with your accountant or lawyer to confirm eligibility.",
+      "Eligible purchasers may qualify for federal and provincial new housing HST rebates subject to price caps and occupancy rules. Ask your accountant or lawyer about your situation.",
   },
   {
     question: "What are occupancy fees before final closing?",
     answer:
-      "If you take interim occupancy before title transfer, the builder may charge occupancy fees covering interest, taxes, and common elements as defined in your agreement — not the same as freehold maintenance after closing.",
+      "If you occupy before title transfer, the builder may charge occupancy fees covering interest, taxes, and defined common elements per your agreement — separate from post-closing freehold ownership costs.",
   },
   {
-    question: "Are there incentives for first-time buyers or investors?",
+    question: "Are builder incentives available?",
     answer:
-      "Builder incentives change by phase and inventory. Register to receive the current incentive sheet; first-time buyers should also review federal programs such as the First Home Savings Account and land-transfer tax rebates where applicable.",
+      "Incentives vary by phase and inventory. Register for the current sheet; first-time buyers should also review federal programs such as the First Home Savings Account where applicable.",
   },
   {
-    question: "How do I register for floor plans and pricing?",
+    question: "How do I receive floor plans and pricing?",
     answer:
-      "Complete the registration form on this page with your contact details and model interest. You will receive floor plan PDFs and pricing information by email — check spam if nothing arrives within a few minutes.",
+      "Submit the registration form with your contact details and model interest. Floor plan PDFs and pricing typically arrive by email — check spam if nothing appears within a few minutes.",
   },
   {
     question: "Is this Sundial Homes' official website?",
     answer:
-      "No. This is an independent marketing site for The Enclave Milton and is not the builder's official sales office. Sundial Homes operates sundialhomes.com — confirm all pricing, features, and availability directly with the builder.",
+      "No. This is an independent information and marketing site, not Sundial's official sales office. Confirm pricing, features, and availability at sundialhomes.com or with an authorized representative.",
   },
 ];
 

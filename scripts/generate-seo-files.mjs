@@ -1,5 +1,5 @@
 /**
- * Prebuild: static sitemap.xml, robots.txt (AI crawlers allowed), llms.txt, llms-full.txt
+ * Prebuild: robots.txt (AI crawlers allowed), llms.txt, llms-full.txt
  */
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
@@ -12,8 +12,7 @@ const SITE_DOMAIN = "theenclavemiltontowns.com";
 
 const data = JSON.parse(readFileSync(join(root, "data/floor-plans.json"), "utf8"));
 const models = data.collections.flatMap((c) => c.models);
-const lastmod = new Date().toISOString().split("T")[0];
-const lastUpdated = new Date().toISOString().split("T")[0];
+const lastUpdated = new Date().toISOString();
 
 const aiBots = [
   "GPTBot",
@@ -50,14 +49,17 @@ Location: Britannia Road, between James Snow Parkway & Fourth Line, Milton, Onta
 Property type: Freehold townhomes — Village Collection (back-to-back) + Park Collection (traditional 2 & 3 storey)
 Price from: $599,990 CAD
 Models: 15 floor plans across 2 collections
-Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
+Monthly maintenance: $0 (freehold)
 Occupancy: 2027
-Status: Now selling / now open (grand opening May 2026)
+Status: Now selling
 Registration: ${SITE_URL}
+
+## Location summary
+Located on Britannia Road between James Snow Parkway and Fourth Line, Milton, Ontario. Highway 401 approximately 3–5 minutes via James Snow Parkway. Milton GO Station approximately 8–10 minutes. Served by Halton District School Board and Halton Catholic District School Board. Adjacent to the planned 162-hectare Milton Education Village. Near Niagara Escarpment UNESCO World Biosphere Reserve conservation areas (Rattlesnake Point, Crawford Lake, Kelso, Hilton Falls).
 `;
 
-const faqBlock = models
-  .map((m) => `- ${m.model}: ${m.slug} at ${SITE_URL}/floor-plans/${m.slug}`)
+const modelUrls = models
+  .map((m) => `- ${m.model}: ${SITE_URL}/floor-plans/${m.slug}`)
   .join("\n");
 
 const llmsFull = `${llms}
@@ -67,25 +69,26 @@ const llmsFull = `${llms}
 - Park Collection: 10 traditional 2 & 3 storey freehold townhomes (1,240–2,843 sq ft approx.)
 
 ## All models
-${faqBlock}
+${modelUrls}
 
-## Key facts for citations
-- Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
-- Sundial Homes builder
-- From $599,990; 15 layouts; occupancy 2027; now selling
+## Schools & area (full guide)
+${SITE_URL}/schools-and-area
 
-## Schools & area guide
-- Full guide: ${SITE_URL}/schools-and-area
-- Future on-site elementary (planned, HDSB coordination)
-- Nearby public elementaries families research: Boyne, Viola Desmond, Ethel Gardiner, Hawthorne Village, E. J. James, Sam Sherratt, Tiger Jeet Singh
-- Public secondaries: Craig Kielburger, Milton District
-- Catholic (HCDSB): Lumen Christi, St. Peter, Guardian Angels, Bishop Reding, St. Benedict, Jean Vanier
-- School catchment: verify address at schoollocator.hdsb.ca and HCDSB school finder — assignments not guaranteed by marketing sites
+Nearest secondary: Craig Kielburger Secondary School (~8 min, IB program)
+Catholic secondary: Bishop P.F. Reding Catholic Secondary (~10 min)
+Planned: Milton SE #13 Public School (HDSB, southeast Milton / Britannia plan)
+Verify catchment: schoollocator.hdsb.ca and hcdsb.ca/schools/school-finder/
 
-## Commute (typical ranges, traffic-dependent)
-- Milton GO Station (Kitchener line): ~10–20 min drive from Britannia area
-- Highway 401 / 407 access via James Snow Parkway and Britannia Road
-- Area page for amenities: shopping on Derry/401 corridors, Milton Sports Centre, escarpment trails, planned village square
+## Commute (approximate, traffic-dependent)
+- Highway 401: ~3–5 min via James Snow Parkway
+- Milton GO to Toronto Union: ~8–10 min drive to station; train ~55–65 min
+- Pearson Airport (YYZ): ~25–30 min
+- Downtown Toronto by car: ~45–55 min (~55 km)
+
+## Recreation
+- Mattamy National Cycling Centre: ~5–8 min (UCI Class 1 velodrome)
+- Milton Education Village: 162 ha planned adjacent to Britannia Road
+- Conservation Halton: Hilton Falls (33.5 km trails), Kelso (22+ km), Rattlesnake Point, Crawford Lake
 `;
 
 mkdirSync(join(root, "public"), { recursive: true });
@@ -93,5 +96,4 @@ writeFileSync(join(root, "public/robots.txt"), robots, "utf8");
 writeFileSync(join(root, "public/llms.txt"), llms, "utf8");
 writeFileSync(join(root, "public/llms-full.txt"), llmsFull, "utf8");
 
-console.log("Generated public/robots.txt (AI crawlers allowed; sitemap via app/sitemap.ts)");
-console.log("Generated public/llms.txt and public/llms-full.txt");
+console.log("Generated public/robots.txt, llms.txt, llms-full.txt");

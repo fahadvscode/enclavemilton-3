@@ -1,6 +1,6 @@
 export const SITE_DOMAIN = "theenclavemiltontowns.com";
 export const SITE_URL = `https://www.${SITE_DOMAIN}`;
-export const SITE_B_SOURCE = SITE_DOMAIN;
+export const SITE_C_SOURCE = SITE_DOMAIN;
 export const SITE_NAME = "The Enclave Milton";
 export const BUILD_DATE = process.env.BUILD_DATE ?? new Date().toISOString().split("T")[0];
 
@@ -8,6 +8,13 @@ export const DEVELOPMENT_GEO = {
   latitude: 43.5085,
   longitude: -79.8628,
 } as const;
+
+export const GEO_REFERENCE_LABEL =
+  "Britannia Road at James Snow Parkway, The Enclave Milton (between James Snow Parkway & Fourth Line)";
+
+/** Shown beside distance tables and school lists. */
+export const DISTANCE_DISCLAIMER =
+  "Distances and drive times are approximate and may vary with traffic conditions. School assignment is address-based — verify with HDSB and HCDSB for your lot.";
 
 /** Shown in footer and beside registration forms — no agent/brokerage identity. */
 export const NON_REPRESENTATION_DISCLAIMER =

@@ -43,4 +43,4 @@ export function buildMetadata({
 }
 
 export const defaultDescription =
-  "The Enclave Milton — new freehold townhomes on Britannia Road by Sundial Homes. 15 layouts from $599,990, $0 monthly maintenance, occupancy 2027. Now selling in Milton, Ontario.";
+  "The Enclave Milton on Britannia Road between James Snow Parkway and Fourth Line — freehold townhomes from $599,990, $0 maintenance, ~3–5 min to Highway 401, Halton schools, now selling for 2027 occupancy.";

@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import { REGISTRATION_FORM_NAME } from "@/lib/registration-form";
 import { getRegistrationModelOptions } from "@/lib/registration-options";
 import { ALL_MODELS_VALUE } from "@/lib/registration-options";
-import { FORM_DISCLAIMER, SITE_B_SOURCE } from "@/lib/site";
+import { FORM_DISCLAIMER, SITE_C_SOURCE } from "@/lib/site";
 import type { RegistrationPayload } from "@/lib/types";
 import styles from "./LeadForm.module.css";
 
@@ -51,7 +51,7 @@ export default function LeadForm({
       phone,
       model,
       collection: selected?.collection ?? "",
-      source: SITE_B_SOURCE,
+      source: SITE_C_SOURCE,
       formName: REGISTRATION_FORM_NAME,
     };
 

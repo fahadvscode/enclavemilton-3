@@ -39,9 +39,10 @@ export default function SchoolsAndAreaPage() {
           </nav>
           <h1>Schools, commute, and amenities near The Enclave Milton</h1>
           <p className="lead">
-            {communityLocation.address} in {communityLocation.area} — research Halton schools,
-            Milton GO, highways, shopping, and recreation before you register for floor plans at The
-            Enclave by Sundial Homes.
+            {communityLocation.address} in {communityLocation.area} — minutes from Highway 401,
+            served by Halton District School Board and Halton Catholic District School Board, with
+            Toronto Premium Outlets, Mattamy National Cycling Centre, and Conservation Halton parks
+            within a short drive. Register below for all 15 Sundial floor plans from $599,990.
           </p>
           <p>
             <Link href="/floor-plans">View all 15 floor plans</Link>

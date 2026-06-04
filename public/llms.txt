@@ -1,5 +1,5 @@
 # The Enclave Milton — AI-readable summary
-# lastUpdated: 2026-06-04
+# lastUpdated: 2026-06-04T01:27:48.754Z
 # canonical: https://www.theenclavemiltontowns.com
 
 Project: The Enclave Milton
@@ -8,7 +8,10 @@ Location: Britannia Road, between James Snow Parkway & Fourth Line, Milton, Onta
 Property type: Freehold townhomes — Village Collection (back-to-back) + Park Collection (traditional 2 & 3 storey)
 Price from: $599,990 CAD
 Models: 15 floor plans across 2 collections
-Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
+Monthly maintenance: $0 (freehold)
 Occupancy: 2027
-Status: Now selling / now open (grand opening May 2026)
+Status: Now selling
 Registration: https://www.theenclavemiltontowns.com
+
+## Location summary
+Located on Britannia Road between James Snow Parkway and Fourth Line, Milton, Ontario. Highway 401 approximately 3–5 minutes via James Snow Parkway. Milton GO Station approximately 8–10 minutes. Served by Halton District School Board and Halton Catholic District School Board. Adjacent to the planned 162-hectare Milton Education Village. Near Niagara Escarpment UNESCO World Biosphere Reserve conservation areas (Rattlesnake Point, Crawford Lake, Kelso, Hilton Falls).

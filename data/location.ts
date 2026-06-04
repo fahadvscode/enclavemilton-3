@@ -1,352 +1,210 @@
+export const GEO_REFERENCE_LABEL =
+  "Britannia Road at James Snow Parkway, The Enclave Milton (between James Snow Parkway & Fourth Line)";
+
 export const HDSB_SCHOOL_LOCATOR = "https://schoollocator.hdsb.ca/";
 export const HDSB_FIND_SCHOOL = "https://www.hdsb.ca/schools/find-local-school/";
 export const HCDSB_SCHOOL_FINDER = "https://hcdsb.ca/schools/school-finder/";
-export const HDSB_PLANNING_EMAIL = "planhalton@hdsb.ca";
 
 export const communityLocation = {
   address: "Britannia Road, between James Snow Parkway & Fourth Line",
   area: "Southeast Milton, Ontario (Halton Region)",
   postalContext: "Milton, Ontario, Canada",
   description:
-    "The Enclave sits in Milton's southeast growth corridor on Britannia Road between James Snow Parkway (Neyagawa Boulevard) and Fourth Line — part of the broader Britannia Secondary Plan area the Town of Milton is developing as a complete, walkable community with housing, parks, schools, and services. Sundial Homes' master plan for this site includes freehold townhomes, a planned village square, trail and cycling connections, and a future elementary school site coordinated with the Halton District School Board. Per local reporting, the broader southeast Milton allocation can include on the order of 1,000+ new homes across phases, with the first builder permits targeted from 2026 onward.",
+    "The Enclave occupies Britannia Road between James Snow Parkway and Fourth Line in Milton's southeast growth corridor — within the Town of Milton's Britannia Secondary Plan. Sundial Homes' master plan includes freehold townhomes, trail connections, a village square, and coordination with the Halton District School Board on a future elementary site. The broader southeast Milton allocation supports long-term schools, parks, and services as the community matures toward a 2051 vision.",
   britanniaPlanUrl: "https://www.letstalkmilton.ca/britannia",
 };
 
 export const areaHighlights = [
-  "Halton Region, Ontario — not Milton, Georgia (US)",
+  "Halton Region, Ontario — not Milton, Georgia (United States)",
   "Britannia Road between James Snow Parkway & Fourth Line",
-  "Planned village square, trails, and cycling network on-site",
-  "Future elementary school site in the master plan (HDSB coordination)",
-  "Access to Highway 401, Highway 407, and Milton GO (Kitchener line)",
-  "Established Milton schools, retail, recreation, and escarpment greenspace nearby",
+  "Highway 401 approximately 3–5 minutes via James Snow Parkway",
+  "Milton GO Station approximately 8–10 minutes by car",
+  "Halton District School Board (public) and Halton Catholic District School Board",
+  "Adjacent to the planned 162-hectare Milton Education Village",
+  "Niagara Escarpment UNESCO World Biosphere Reserve conservation areas nearby",
 ];
 
-export const commuteFacts = [
-  {
-    name: "Milton GO Station",
-    line: "Kitchener line (GO Transit)",
-    typicalDrive: "Roughly 10–20 minutes by car from Britannia Road area, traffic-dependent",
-    typicalTrainUnion:
-      "GO train to Toronto Union often cited in the 45–65 minute range; schedules vary — check GO Transit",
-    note: "Park-and-ride commuter access to the GTA core without driving downtown daily.",
-  },
-  {
-    name: "Highway 401",
-    typicalDrive: "Often reachable in roughly 10–20 minutes via regional roads, traffic-dependent",
-    note: "Primary east–west corridor for Mississauga, Toronto, and western GTA connections.",
-  },
-  {
-    name: "Highway 407 ETR",
-    typicalDrive: "Often reachable in roughly 15–25 minutes, traffic-dependent",
-    note: "Toll highway option for faster cross-regional trips when time matters more than toll cost.",
-  },
-  {
-    name: "James Snow Parkway / Britannia Road",
-    typicalDrive: "Direct local connectors at the community front door",
-    note: "Links the site into Milton's arterial network toward shopping, employment, and highways.",
-  },
-];
-
-export type NearbySchool = {
+export type GeoRow = {
   name: string;
-  type: string;
+  driveTime: string;
+  notes: string;
+};
+
+export type GeoSchoolRow = GeoRow & {
   grades: string;
-  board: "Halton District School Board" | "Halton Catholic District School Board";
-  note: string;
-  buyerNote: string;
-  website?: string;
 };
 
-export const futureOnSiteSchool: NearbySchool = {
-  name: "Future on-site elementary school (planned)",
-  type: "Elementary (planned)",
-  grades: "Elementary (grades TBD by HDSB)",
-  board: "Halton District School Board",
-  note: "Identified in The Enclave / southeast Milton master plan; timing and boundaries subject to HDSB and Town approval.",
-  buyerNote:
-    "Pre-construction buyers should not assume this school will be open by your occupancy date. When built, it could change walk-to-school convenience for the neighbourhood — but catchment maps are set by the school board, not the builder.",
-};
+export const hdsbElementarySchools: GeoSchoolRow[] = [
+  { name: "Sam Sherratt Public School", grades: "JK–8", driveTime: "~5 min", notes: "Established community school in southeast Milton" },
+  { name: "Hawthorne Village Public School", grades: "JK–8", driveTime: "~5–8 min", notes: "Newer school serving growing neighbourhoods" },
+  { name: "Tiger Jeet Singh Public School", grades: "JK–8", driveTime: "~8 min", notes: "Named after Canadian wrestling icon Tiger Jeet Singh" },
+  { name: "Viola Desmond Public School", grades: "JK–8", driveTime: "~8 min", notes: "Named after Canadian civil rights pioneer Viola Desmond" },
+  { name: "Irma Coulson Public School", grades: "JK–8", driveTime: "~8 min", notes: "Public elementary in Milton" },
+  { name: "P.L. Robertson Public School", grades: "JK–8", driveTime: "~10 min", notes: "Serves Milton families — verify catchment" },
+  { name: "Chris Hadfield Public School", grades: "JK–8", driveTime: "~10 min", notes: "Named after Canadian astronaut Chris Hadfield" },
+  { name: "Rattlesnake Point Public School", grades: "JK–8", driveTime: "~10 min", notes: "Elementary in Milton's west/southwest area" },
+  { name: "Milton SE #13 PS", grades: "JK–8 (planned)", driveTime: "Planned", notes: "Future school for southeast Milton growth — directly relevant to Britannia Secondary Plan" },
+];
 
-export const nearbySchools: NearbySchool[] = [
-  futureOnSiteSchool,
-  {
-    name: "Boyne Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Serves the adjacent Boyne / southeast Milton growth area — confirm your address in the HDSB locator.",
-    buyerNote:
-      "Often relevant for families comparing new communities along Britannia and James Snow; boundary reviews are common as Milton grows.",
-    website: "https://boyne.hdsb.ca/",
-  },
-  {
-    name: "Viola Desmond Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Modern Milton elementary — verify catchment for your specific lot before you buy.",
-    buyerNote:
-      "Families moving from Toronto or Mississauga often research newer Milton schools alongside commute time; assignment is address-based only.",
-    website: "https://violadesmond.hdsb.ca/",
-  },
-  {
-    name: "Ethel Gardiner Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Established Milton elementary — confirm assignment with HDSB.",
-    buyerNote:
-      "Useful comparison point for buyers who want an established school community versus waiting for the planned on-site school.",
-    website: "https://ethelgardiner.hdsb.ca/",
-  },
-  {
-    name: "Hawthorne Village Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Serves growing Milton neighbourhoods — boundaries may shift with new development.",
-    buyerNote:
-      "Illustrates why Halton publishes boundary review pages: new housing can redistribute enrolment across nearby elementaries.",
-    website: "https://hawthorneyvillage.hdsb.ca/",
-  },
-  {
-    name: "E. J. James Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Milton elementary option — confirm catchment via HDSB school locator.",
-    buyerNote:
-      "One of several HDSB elementaries Milton families evaluate when moving for space and relative value versus inner-GTA pricing.",
-    website: "https://ejjames.hdsb.ca/",
-  },
-  {
-    name: "Sam Sherratt Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Milton public elementary — verify for your address.",
-    buyerNote:
-      "Included because buyers frequently search by school name when comparing Milton communities; only the locator confirms eligibility.",
-    website: "https://samsherratt.hdsb.ca/",
-  },
-  {
-    name: "Tiger Jeet Singh Public School",
-    type: "Elementary (public)",
-    grades: "K–8",
-    board: "Halton District School Board",
-    note: "Milton public elementary — confirm catchment before purchase.",
-    buyerNote:
-      "Represents the breadth of HDSB options across Milton — important for families who want choice among public English programs.",
-    website: "https://tigerjeetsingh.hdsb.ca/",
-  },
-  {
-    name: "Lumen Christi Catholic Elementary School",
-    type: "Elementary (Catholic)",
-    grades: "K–8",
-    board: "Halton Catholic District School Board",
-    note: "Separate school system — registration and catchment use HCDSB tools, not HDSB.",
-    buyerNote:
-      "Catholic elementary requires separate board registration and may require baptism documentation — confirm HCDSB policy before you buy.",
-    website: "https://lumen.hcdsb.org/",
-  },
-  {
-    name: "St. Peter Catholic Elementary School",
-    type: "Elementary (Catholic)",
-    grades: "K–8",
-    board: "Halton Catholic District School Board",
-    note: "Milton Catholic elementary — verify address in HCDSB school finder.",
-    buyerNote:
-      "Families choosing Catholic education should map both elementary and secondary pathways in HCDSB at the same time.",
-    website: "https://stpeter.hcdsb.org/",
-  },
-  {
-    name: "Guardian Angels Catholic Elementary School",
-    type: "Elementary (Catholic)",
-    grades: "K–8",
-    board: "Halton Catholic District School Board",
-    note: "Halton Catholic option in Milton — confirm catchment.",
-    buyerNote:
-      "Highlights that Milton offers parallel public systems; your home address determines Catholic eligibility, not proximity alone.",
-    website: "https://gace.hcdsb.org/",
-  },
+export const hdsbSecondarySchools: GeoSchoolRow[] = [
   {
     name: "Craig Kielburger Secondary School",
-    type: "Secondary (public)",
     grades: "9–12",
-    board: "Halton District School Board",
-    note: "Milton public high school — secondary assignment is address-specific.",
-    buyerNote:
-      "Buyers with teens should verify secondary catchment early; moving one kilometre can change high school assignment in growing areas.",
-    website: "https://craigkielburger.hdsb.ca/",
+    driveTime: "~8 min",
+    notes:
+      "Nearest secondary. 2,000+ students. International Baccalaureate (IB) Diploma, French Immersion, SHSM, cooperative education, arts and athletics. Opened 2012.",
+  },
+  { name: "Elsie MacGill Secondary School", grades: "9–12", driveTime: "~10 min", notes: "Newer secondary serving east Milton" },
+  { name: "Milton District High School", grades: "9–12", driveTime: "~12 min", notes: "Milton's established public secondary school" },
+];
+
+export const hcdsbElementarySchools: GeoSchoolRow[] = [
+  { name: "St. Peter Catholic Elementary", grades: "JK–8", driveTime: "~5–8 min", notes: "Halton Catholic elementary" },
+  { name: "St. Benedict Catholic Elementary", grades: "JK–8", driveTime: "~8 min", notes: "Catholic elementary in Milton" },
+  { name: "St. Scholastica Catholic Elementary", grades: "JK–8", driveTime: "~8 min", notes: "Halton Catholic District School Board" },
+  { name: "St. Anthony of Padua Catholic Elementary", grades: "JK–8", driveTime: "~10 min", notes: "Verify assignment in HCDSB school finder" },
+  {
+    name: "Holy Rosary Catholic Elementary",
+    grades: "JK–8",
+    driveTime: "~12 min",
+    notes: "Strong EQAO results in Milton. Extended French Immersion from Grade 5.",
+  },
+];
+
+export const hcdsbSecondarySchools: GeoSchoolRow[] = [
+  {
+    name: "Bishop P.F. Reding Catholic Secondary",
+    grades: "9–12",
+    driveTime: "~10 min",
+    notes: "Highest-scoring secondary school in Milton (Catholic board).",
+  },
+  { name: "St. Francis Xavier Catholic Secondary", grades: "9–12", driveTime: "~12 min", notes: "Halton Catholic secondary option" },
+];
+
+export const highwayAccess: GeoRow[] = [
+  { name: "Highway 401", driveTime: "~3–5 min", notes: "Via James Snow Parkway interchange (immediately south) or Britannia Road" },
+  { name: "Highway 407 ETR", driveTime: "~8–10 min", notes: "Toll highway east to Mississauga/Toronto, west to Hamilton" },
+  { name: "Britannia Road", driveTime: "Direct frontage", notes: "East–west arterial to Trafalgar Road and Regional Road 25" },
+  { name: "James Snow Parkway", driveTime: "Direct access", notes: "North–south arterial to Highway 401" },
+  { name: "Fourth Line", driveTime: "Adjacent", notes: "Connects north to Derry Road and Milton's east side" },
+];
+
+export const publicTransit: GeoRow[] = [
+  {
+    name: "Milton GO Station",
+    driveTime: "~8–10 min",
+    notes:
+      "780 Main Street East. Western terminus of GO Transit Milton line. Direct train to Toronto Union Station at peak hours; GO bus service throughout the day.",
   },
   {
-    name: "Milton District High School",
-    type: "Secondary (public)",
-    grades: "9–12",
-    board: "Halton District School Board",
-    note: "Long-established Milton secondary school — confirm via HDSB locator.",
-    buyerNote:
-      "Often compared with Craig Kielburger for course offerings and extracurriculars — only your address determines which applies.",
-    website: "https://miltondistrict.hdsb.ca/",
+    name: "Milton Transit",
+    driveTime: "Local routes",
+    notes: "Connects to GO Station, schools, shopping, and recreation. Route 21 links GO Station to Steeles/Trafalgar area.",
+  },
+];
+
+export type CommuteDestination = {
+  destination: string;
+  driveTime: string;
+  distance: string;
+};
+
+export const commuteDestinations: CommuteDestination[] = [
+  { destination: "Downtown Toronto (Union Station)", driveTime: "~45–55 min", distance: "~55 km" },
+  { destination: "Mississauga City Centre", driveTime: "~25–30 min", distance: "~30 km" },
+  { destination: "Pearson International Airport (YYZ)", driveTime: "~25–30 min", distance: "~35 km" },
+  { destination: "Oakville (downtown)", driveTime: "~20–25 min", distance: "~25 km" },
+  { destination: "Hamilton (McMaster University)", driveTime: "~30–35 min", distance: "~40 km" },
+  { destination: "University of Toronto Mississauga (UTM)", driveTime: "~20–25 min", distance: "~25 km" },
+  { destination: "Brampton", driveTime: "~20–25 min", distance: "~25 km" },
+  { destination: "Square One Shopping Centre", driveTime: "~20–25 min", distance: "~28 km" },
+];
+
+export const shoppingAmenities: GeoRow[] = [
+  { name: "Toronto Premium Outlets", driveTime: "~10 min / 9.3 km", notes: "100+ outlet stores at Steeles Avenue & Trafalgar Road" },
+  { name: "Milton Crossroads", driveTime: "~10 min", notes: "Walmart, Canadian Tire, Staples, Indigo, Marks, restaurants" },
+  { name: "Milton Marketplace", driveTime: "~10–12 min", notes: "Additional retail and grocery" },
+  { name: "Downtown Milton (Main Street)", driveTime: "~10 min", notes: "Historic Main Street, cafés, seasonal farmers' market" },
+  { name: "Grocery (multiple chains)", driveTime: "~5–10 min", notes: "FreshCo, Food Basics, Metro, Sobeys, Walmart Supercentre" },
+  { name: "Costco", driveTime: "~12–15 min", notes: "Milton-area warehouse club" },
+];
+
+export const recreationAmenities: GeoRow[] = [
+  {
+    name: "Mattamy National Cycling Centre",
+    driveTime: "~5–8 min",
+    notes:
+      "Canada's only UCI-regulated Class 1 indoor velodrome (2015 Pan Am Games, ~$63M). Three gymnasiums, indoor track, fitness studio on Tremaine Road near Britannia.",
   },
   {
-    name: "Bishop Reding Catholic Secondary School",
-    type: "Secondary (Catholic)",
-    grades: "9–12",
-    board: "Halton Catholic District School Board",
-    note: "Halton Catholic secondary in Milton — use HCDSB finder.",
-    buyerNote:
-      "Catholic secondary pathway planning should align with your elementary feeder expectations under HCDSB policies.",
-    website: "https://bishopreding.hcdsb.org/",
+    name: "Milton Education Village (MEV)",
+    driveTime: "Adjacent / ~5 min",
+    notes: "162 hectares (400 acres) planned mixed-use centred on the Cycling Centre; Britannia Road south boundary. 2051 long-term vision.",
   },
+  { name: "Milton Leisure Centre", driveTime: "~10 min", notes: "Lap pool, play pool, waterslide, fitness" },
+  { name: "Milton Sports Centre", driveTime: "~10 min", notes: "Fitness studio, pools, community programs" },
+  { name: "John Tonelli Sports Centre", driveTime: "~12 min", notes: "Ice rink and meeting rooms" },
+  { name: "Rattlesnake Point Conservation Area", driveTime: "~15 min", notes: "Escarpment lookouts, hiking, rock climbing — Conservation Halton" },
+  { name: "Crawford Lake Conservation Area", driveTime: "~15 min", notes: "Meromictic lake, 19 km trails, Iroquoian longhouse village" },
+  { name: "Kelso Conservation Area", driveTime: "~12 min", notes: "22+ km trails, beach, ski/snowboard hill (winter)" },
+  { name: "Hilton Falls Conservation Area", driveTime: "~10 min", notes: "33.5 km trails, waterfall, Escarpment forest" },
+  { name: "Area 8 (Conservation Halton)", driveTime: "~12 min", notes: "3 trails, 4 lookouts, fire pit, boat rentals" },
+  { name: "Bruce Trail", driveTime: "Nearby access", notes: "Canada's oldest marked footpath — 900+ km along the Escarpment" },
   {
-    name: "St. Benedict Catholic Secondary School",
-    type: "Secondary (Catholic)",
-    grades: "9–12",
-    board: "Halton Catholic District School Board",
-    note: "Milton Catholic high school option — verify catchment.",
-    buyerNote:
-      "Families prioritizing Catholic 9–12 education should confirm both elementary feeder schools and secondary destination before firming a lot.",
-    website: "https://stbenedict.hcdsb.org/",
+    name: "Niagara Escarpment UNESCO World Biosphere Reserve",
+    driveTime: "Nearby",
+    notes: "Milton sits at the base of the Escarpment — regional conservation and trail network",
   },
+];
+
+export const healthcareAmenities: GeoRow[] = [
   {
-    name: "Jean Vanier Catholic Secondary School",
-    type: "Secondary (Catholic)",
-    grades: "9–12",
-    board: "Halton Catholic District School Board",
-    note: "Halton Catholic secondary serving Milton families — confirm address.",
-    buyerNote:
-      "Included for comprehensive Catholic secondary research; assignment rules differ from the public board.",
-    website: "https://jeanvanier.hcdsb.org/",
+    name: "Milton District Hospital",
+    driveTime: "~10 min",
+    notes: "129-bed acute care, Halton Healthcare. Emergency, imaging, mental health on Derry Road. Expanded 2017.",
   },
+  { name: "Halton Healthcare network", driveTime: "Regional", notes: "Oakville Trafalgar Memorial, Georgetown Hospital" },
+  { name: "Walk-in clinics & family practices", driveTime: "~5–10 min", notes: "Multiple clinics throughout Milton" },
 ];
 
 export const schoolBuyerGuide = {
-  title: "How schools affect your purchase at The Enclave Milton",
+  title: "School research checklist for Britannia Road buyers",
   sections: [
     {
-      heading: "Catchments are address-based, not marketing promises",
-      body: "Halton school assignment is determined by the Halton District School Board and Halton Catholic District School Board using your home address — not sales centre materials. Before you firm a purchase, enter your exact lot or nearest intersection into the official HDSB school locator and HCDSB school finder. Boundaries change as Milton grows.",
+      heading: "Catchment follows your address, not the development name",
+      body: "Halton District School Board and Halton Catholic District School Board assign schools by home address. Enter your lot or nearest intersection in the official locators before you firm — proximity does not guarantee assignment.",
     },
     {
-      heading: "Growing Milton means boundary reviews",
-      body: "The Britannia Secondary Plan and southeast Milton developments add housing quickly. HDSB publishes accommodation planning and boundary review updates that can shift which elementary or secondary school serves a street. Pre-construction buyers should budget time to monitor HDSB planning announcements through occupancy.",
+      heading: "Southeast Milton is still adding schools",
+      body: "Milton's school-age population grew sharply between 2011 and 2021, driving new construction. HDSB's long-term plan includes Milton SE #13 Public School for southeast growth in the Britannia Secondary Plan zone. Opening dates and boundaries are board decisions.",
     },
     {
-      heading: "The planned on-site elementary school",
-      body: "Town and media reporting describe coordination between Sundial Homes, the Town of Milton, and HDSB on a future elementary school within the southeast Milton allocation. That can improve neighbourhood convenience when it opens — but opening dates, grades offered, and catchment maps are board decisions. Do not buy assuming your child will attend it on day one.",
+      heading: "Lead with Craig Kielburger and Bishop P.F. Reding for secondary planning",
+      body: "Craig Kielburger Secondary School (~8 min) is the nearest public high school with IB Diploma programming. Bishop P.F. Reding Catholic Secondary (~10 min) is Milton's highest-scoring Catholic secondary. Verify both pathways if you have teens.",
     },
     {
-      heading: "Public English vs Catholic vs French immersion",
-      body: "Most listings reference HDSB English schools. Catholic education is a separate system (HCDSB) with its own registration requirements. French immersion pathways exist within HDSB but use dedicated entry rules and capacity limits — confirm program availability on the board website, not third-party listing sites.",
+      heading: "French Immersion requires program checks",
+      body: "Craig Kielburger offers French Immersion at secondary level. Holy Rosary Catholic Elementary offers Extended French Immersion from Grade 5. Program entry rules and capacity limits apply — confirm on board websites.",
     },
     {
-      heading: "Registering before 2027 occupancy",
-      body: "You generally need a Milton address to register for school. Pre-construction buyers can research pathways now but final registration happens closer to move-in. If you have school-age children, align your closing timeline with the academic year and contact boards early when your address is assigned.",
+      heading: "Register children after you have a Milton address",
+      body: "Pre-construction buyers can research catchments now but typically complete registration after closing. Align occupancy with the school year if children are transferring mid-year.",
     },
     {
-      heading: "Resale and family appeal",
-      body: "Even without school-age children, school proximity and reputation influence resale interest in family-oriented Milton townhome communities. Verify facts with official board tools rather than social media rankings, which are often outdated or incorrect for new addresses.",
+      heading: "Resale value and accurate school facts",
+      body: "Family buyers filter by school reputation and commute together. Cite only board-verified school names in listings and include a catchment disclaimer for tenants and future buyers.",
     },
   ],
 };
 
-export type NearbyAmenity = {
-  category: string;
-  name: string;
-  description: string;
-  typicalAccess?: string;
-};
-
-export const nearbyAmenities: NearbyAmenity[] = [
-  {
-    category: "Transit",
-    name: "Milton GO Station",
-    description: "Kitchener line service toward Toronto Union — core option for commuters.",
-    typicalAccess: "Roughly 10–20 minutes by car from Britannia Road area, traffic-dependent",
-  },
-  {
-    category: "Highways",
-    name: "Highway 401 & Highway 407",
-    description: "Regional highway access via James Snow Parkway, Britannia Road, and Derry Road corridors.",
-    typicalAccess: "Often 10–25 minutes to highway ramps depending on route and traffic",
-  },
-  {
-    category: "Shopping",
-    name: "Derry Road & Hwy 401 retail corridor",
-    description: "Big-box, grocery, home improvement, and everyday retail clusters along Milton's main commercial arteries.",
-    typicalAccess: "Typically within a short drive of southeast Milton",
-  },
-  {
-    category: "Shopping",
-    name: "Costco / major retail (Milton)",
-    description: "Warehouse and power-centre shopping serving Milton and west GTA families.",
-    typicalAccess: "Short drive via Derry Road or regional connectors",
-  },
-  {
-    category: "Shopping",
-    name: "Downtown Milton (Main Street)",
-    description: "Local shops, restaurants, farmers' market culture, and community events.",
-    typicalAccess: "Roughly 15–25 minutes by car, traffic-dependent",
-  },
-  {
-    category: "Healthcare",
-    name: "Milton District Hospital area",
-    description: "Hospital and medical services cluster serving Milton and Halton Hills residents.",
-    typicalAccess: "Short drive within Milton",
-  },
-  {
-    category: "Recreation",
-    name: "Milton Sports Centre",
-    description: "Arena, fitness, and registered community programs.",
-    typicalAccess: "Within Milton — typically under 20 minutes by car",
-  },
-  {
-    category: "Recreation",
-    name: "Mattamy National Cycling Centre / Milton sports precinct",
-    description: "Major recreation and event facilities associated with Milton's sports tourism profile.",
-    typicalAccess: "Short drive within town",
-  },
-  {
-    category: "Parks & trails",
-    name: "Niagara Escarpment & valley trails",
-    description: "Hiking, cycling, and outdoor recreation along Halton's escarpment landscape.",
-    typicalAccess: "Several trailheads within Milton and Halton Region",
-  },
-  {
-    category: "Parks",
-    name: "Mohawk Park & neighbourhood parks",
-    description: "Local park space for playgrounds, sports fields, and everyday outdoor time.",
-    typicalAccess: "Distributed across Milton neighbourhoods",
-  },
-  {
-    category: "Community",
-    name: "Planned village square (The Enclave)",
-    description: "On-site gathering space envisioned in the Sundial master plan for the Britannia Road community.",
-    typicalAccess: "Within the development as phases mature",
-  },
-  {
-    category: "Connectivity",
-    name: "Trail & cycling network (planned)",
-    description: "Pedestrian and cycling connections described in southeast Milton planning documents.",
-    typicalAccess: "On-site and linking to broader Milton active-transportation routes over time",
-  },
-  {
-    category: "Future retail",
-    name: "Britannia Secondary Plan commercial areas",
-    description: "The Town's Britannia plan envisions mixed uses and services as the corridor builds out — timing varies by phase.",
-    typicalAccess: "Walkable amenities expected to grow with population; confirm current retail on visit",
-  },
-];
-
+/** @deprecated Use geo school tables — kept for any legacy imports */
 export const locationDisclaimer =
-  "School catchments, program availability (including French immersion), travel times, and amenities change. This page is for general research only — confirm schools with HDSB and HCDSB using your exact address before you buy. Visit the community and verify distances in person.";
+  "Distances and drive times are approximate and may vary with traffic conditions. School assignment is address-based — verify with HDSB and HCDSB for your lot.";
 
-/** Featured on homepage teaser (subset) */
 export const featuredSchoolNames = [
-  "Future on-site elementary (planned)",
-  "Boyne Public School",
-  "Viola Desmond Public School",
   "Craig Kielburger Secondary School",
-  "Bishop Reding Catholic Secondary School",
+  "Bishop P.F. Reding Catholic Secondary",
+  "Milton SE #13 PS (planned)",
+  "Sam Sherratt Public School",
+  "Holy Rosary Catholic Elementary",
 ];

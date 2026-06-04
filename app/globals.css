@@ -1,28 +1,28 @@
 :root {
-  --brand-primary: #1e3b41;
-  --brand-secondary: #b6afa2;
+  --brand-primary: #0f2e33;
+  --brand-secondary: #d4c9b8;
   --brand-white: #ffffff;
-  --bg: #faf9f7;
-  --text: #1e293b;
-  --primary: #1e3b41;
-  --accent: #1e3b41;
-  --accent-hover: #163238;
-  --secondary: #b6afa2;
-  --secondary-hover: #a39d92;
-  --muted: #64748b;
-  --line: #e2e8f0;
+  --bg: #f6f3ee;
+  --text: #1a2e32;
+  --primary: #0f2e33;
+  --accent: #0f2e33;
+  --accent-hover: #0a2226;
+  --secondary: #d4c9b8;
+  --secondary-hover: #c4b8a6;
+  --muted: #5c6b6e;
+  --line: #ddd6cb;
   --card: #ffffff;
   --hero-overlay: linear-gradient(
-    105deg,
-    rgba(30, 59, 65, 0.92) 0%,
-    rgba(30, 59, 65, 0.62) 48%,
-    rgba(30, 59, 65, 0.28) 100%
+    108deg,
+    rgba(15, 46, 51, 0.94) 0%,
+    rgba(15, 46, 51, 0.68) 50%,
+    rgba(15, 46, 51, 0.32) 100%
   );
-  --radius: 12px;
-  --radius-lg: 16px;
-  --shadow: 0 12px 40px rgba(30, 59, 65, 0.14);
-  --font-heading: var(--font-sora), system-ui, sans-serif;
-  --font-body: var(--font-source), system-ui, sans-serif;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 12px 40px rgba(15, 46, 51, 0.12);
+  --font-heading: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-jakarta), system-ui, sans-serif;
   --sticky-cta-height: 56px;
 }
 

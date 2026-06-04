@@ -5,7 +5,13 @@ import LeadForm from "./LeadForm";
 import styles from "./HeroBlock.module.css";
 
 const ANSWER_SUMMARY =
-  "The Enclave Milton is a new freehold townhome community by Sundial Homes on Britannia Road in Milton, Ontario — fifteen layouts across Village back-to-back and Park traditional collections from $599,990, with $0 monthly maintenance and occupancy in 2027. Homes are now selling; register for floor plans and current pricing.";
+  "Freehold townhomes on Britannia Road between James Snow Parkway and Fourth Line in Milton, Ontario — minutes from Highway 401, served by Halton's top-rated public and Catholic schools, from $599,990 with $0 monthly maintenance. Now selling for 2027 occupancy.";
+
+const FACT_CHIPS = [
+  { label: "Highway 401", value: "~3–5 min" },
+  { label: "Craig Kielburger SS", value: "~8 min" },
+  { label: "From", value: "$599,990" },
+];
 
 export default function HeroBlock() {
   return (
@@ -31,18 +37,31 @@ export default function HeroBlock() {
             className={styles.logo}
             priority
           />
-          <p className={styles.badge}>Now selling · Milton, Ontario</p>
+          <p className={styles.locationLine}>
+            Britannia Road · James Snow Parkway &amp; Fourth Line · Milton, ON
+          </p>
+          <p className={styles.badge}>Now selling · 2027 occupancy</p>
           <h1 id="hero-heading">
-            The Enclave Milton — Freehold Townhomes from $599,990 · $0 Monthly Maintenance ·
-            Now Selling
+            The Enclave Milton — freehold townhomes in southeast Milton
           </h1>
           <p className={styles.answer}>{ANSWER_SUMMARY}</p>
+          <ul className={styles.chips} aria-label="Location and pricing highlights">
+            {FACT_CHIPS.map((chip) => (
+              <li key={chip.label}>
+                <span className={styles.chipLabel}>{chip.label}</span>
+                <span className={styles.chipValue}>{chip.value}</span>
+              </li>
+            ))}
+          </ul>
           <div className={styles.actions}>
             <a href="#register" className="btn btn--primary">
               Get floor plans &amp; pricing
             </a>
+            <Link href="/schools-and-area" className="btn btn--ghost">
+              Schools &amp; area guide
+            </Link>
             <Link href="/floor-plans" className="btn btn--ghost">
-              See all 15 layouts
+              All 15 layouts
             </Link>
           </div>
         </div>

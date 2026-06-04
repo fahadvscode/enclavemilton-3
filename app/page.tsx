@@ -5,7 +5,7 @@ import WhySection from "@/components/WhySection";
 import BentoCollections from "@/components/BentoCollections";
 import CompareTable from "@/components/CompareTable";
 import CtaBand from "@/components/CtaBand";
-import LocationBlock from "@/components/LocationBlock";
+import GeoLocationHub from "@/components/GeoLocationHub";
 import FaqSection from "@/components/FaqSection";
 import { homepageGraph } from "@/lib/structured-data";
 
@@ -19,7 +19,7 @@ export default function HomePage() {
       <BentoCollections />
       <CompareTable />
       <CtaBand id="register-mid" />
-      <LocationBlock />
+      <GeoLocationHub />
       <FaqSection />
       <CtaBand id="register-footer" title="Get floor plans & pricing for all 15 models" />
     </>

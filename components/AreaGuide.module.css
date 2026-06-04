@@ -111,6 +111,35 @@
   margin-top: 1.5rem;
 }
 
+.boardTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.5rem;
+  color: var(--primary);
+}
+
+.mediaRow {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 320px);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.sideImage {
+  border-radius: var(--radius);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .mediaRow {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 2.5rem 0;

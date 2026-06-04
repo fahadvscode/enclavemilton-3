@@ -55,6 +55,33 @@ export function homepageGraph() {
           latitude: DEVELOPMENT_GEO.latitude,
           longitude: DEVELOPMENT_GEO.longitude,
         },
+        amenityFeature: [
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Highway 401",
+            value: "Approximately 3–5 minutes by car via James Snow Parkway",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Milton GO Station",
+            value: "Approximately 8–10 minutes by car",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Mattamy National Cycling Centre",
+            value: "Approximately 5–8 minutes by car",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Toronto Premium Outlets",
+            value: "Approximately 10 minutes by car",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Conservation Halton parks",
+            value: "Rattlesnake Point, Crawford Lake, Kelso, Hilton Falls within 10–15 minutes",
+          },
+        ],
         image: {
           "@type": "ImageObject",
           url: "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
@@ -99,6 +126,23 @@ export function homepageGraph() {
           latitude: DEVELOPMENT_GEO.latitude,
           longitude: DEVELOPMENT_GEO.longitude,
         },
+        amenityFeature: [
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Highway 401",
+            value: "Approximately 3–5 minutes by car",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Milton GO Station",
+            value: "Approximately 8–10 minutes by car",
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Milton Education Village",
+            value: "162-hectare planned mixed-use adjacent to Britannia Road",
+          },
+        ],
       },
       {
         "@type": "BreadcrumbList",

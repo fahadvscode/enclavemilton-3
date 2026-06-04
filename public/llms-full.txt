@@ -1,5 +1,5 @@
 # The Enclave Milton — AI-readable summary
-# lastUpdated: 2026-06-04
+# lastUpdated: 2026-06-04T01:27:48.754Z
 # canonical: https://www.theenclavemiltontowns.com
 
 Project: The Enclave Milton
@@ -8,10 +8,13 @@ Location: Britannia Road, between James Snow Parkway & Fourth Line, Milton, Onta
 Property type: Freehold townhomes — Village Collection (back-to-back) + Park Collection (traditional 2 & 3 storey)
 Price from: $599,990 CAD
 Models: 15 floor plans across 2 collections
-Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
+Monthly maintenance: $0 (freehold)
 Occupancy: 2027
-Status: Now selling / now open (grand opening May 2026)
+Status: Now selling
 Registration: https://www.theenclavemiltontowns.com
+
+## Location summary
+Located on Britannia Road between James Snow Parkway and Fourth Line, Milton, Ontario. Highway 401 approximately 3–5 minutes via James Snow Parkway. Milton GO Station approximately 8–10 minutes. Served by Halton District School Board and Halton Catholic District School Board. Adjacent to the planned 162-hectare Milton Education Village. Near Niagara Escarpment UNESCO World Biosphere Reserve conservation areas (Rattlesnake Point, Crawford Lake, Kelso, Hilton Falls).
 
 
 ## Collections
@@ -19,36 +22,37 @@ Registration: https://www.theenclavemiltontowns.com
 - Park Collection: 10 traditional 2 & 3 storey freehold townhomes (1,240–2,843 sq ft approx.)
 
 ## All models
-- The Brighton: the-brighton at https://www.theenclavemiltontowns.com/floor-plans/the-brighton
-- The Dover: the-dover at https://www.theenclavemiltontowns.com/floor-plans/the-dover
-- The Durham: the-durham at https://www.theenclavemiltontowns.com/floor-plans/the-durham
-- The Oxford: the-oxford at https://www.theenclavemiltontowns.com/floor-plans/the-oxford
-- The York: the-york at https://www.theenclavemiltontowns.com/floor-plans/the-york
-- The Burgess: the-burgess at https://www.theenclavemiltontowns.com/floor-plans/the-burgess
-- The Greenwich: the-greenwich at https://www.theenclavemiltontowns.com/floor-plans/the-greenwich
-- The Highgrove: the-highgrove at https://www.theenclavemiltontowns.com/floor-plans/the-highgrove
-- The Hyde: the-hyde at https://www.theenclavemiltontowns.com/floor-plans/the-hyde
-- The Apsley: the-apsley at https://www.theenclavemiltontowns.com/floor-plans/the-apsley
-- The Downing: the-downing at https://www.theenclavemiltontowns.com/floor-plans/the-downing
-- The Knox: the-knox at https://www.theenclavemiltontowns.com/floor-plans/the-knox
-- The Severs: the-severs at https://www.theenclavemiltontowns.com/floor-plans/the-severs
-- The Spencer: the-spencer at https://www.theenclavemiltontowns.com/floor-plans/the-spencer
-- The Walker: the-walker at https://www.theenclavemiltontowns.com/floor-plans/the-walker
+- The Brighton: https://www.theenclavemiltontowns.com/floor-plans/the-brighton
+- The Dover: https://www.theenclavemiltontowns.com/floor-plans/the-dover
+- The Durham: https://www.theenclavemiltontowns.com/floor-plans/the-durham
+- The Oxford: https://www.theenclavemiltontowns.com/floor-plans/the-oxford
+- The York: https://www.theenclavemiltontowns.com/floor-plans/the-york
+- The Burgess: https://www.theenclavemiltontowns.com/floor-plans/the-burgess
+- The Greenwich: https://www.theenclavemiltontowns.com/floor-plans/the-greenwich
+- The Highgrove: https://www.theenclavemiltontowns.com/floor-plans/the-highgrove
+- The Hyde: https://www.theenclavemiltontowns.com/floor-plans/the-hyde
+- The Apsley: https://www.theenclavemiltontowns.com/floor-plans/the-apsley
+- The Downing: https://www.theenclavemiltontowns.com/floor-plans/the-downing
+- The Knox: https://www.theenclavemiltontowns.com/floor-plans/the-knox
+- The Severs: https://www.theenclavemiltontowns.com/floor-plans/the-severs
+- The Spencer: https://www.theenclavemiltontowns.com/floor-plans/the-spencer
+- The Walker: https://www.theenclavemiltontowns.com/floor-plans/the-walker
 
-## Key facts for citations
-- Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
-- Sundial Homes builder
-- From $599,990; 15 layouts; occupancy 2027; now selling
+## Schools & area (full guide)
+https://www.theenclavemiltontowns.com/schools-and-area
 
-## Schools & area guide
-- Full guide: https://www.theenclavemiltontowns.com/schools-and-area
-- Future on-site elementary (planned, HDSB coordination)
-- Nearby public elementaries families research: Boyne, Viola Desmond, Ethel Gardiner, Hawthorne Village, E. J. James, Sam Sherratt, Tiger Jeet Singh
-- Public secondaries: Craig Kielburger, Milton District
-- Catholic (HCDSB): Lumen Christi, St. Peter, Guardian Angels, Bishop Reding, St. Benedict, Jean Vanier
-- School catchment: verify address at schoollocator.hdsb.ca and HCDSB school finder — assignments not guaranteed by marketing sites
+Nearest secondary: Craig Kielburger Secondary School (~8 min, IB program)
+Catholic secondary: Bishop P.F. Reding Catholic Secondary (~10 min)
+Planned: Milton SE #13 Public School (HDSB, southeast Milton / Britannia plan)
+Verify catchment: schoollocator.hdsb.ca and hcdsb.ca/schools/school-finder/
 
-## Commute (typical ranges, traffic-dependent)
-- Milton GO Station (Kitchener line): ~10–20 min drive from Britannia area
-- Highway 401 / 407 access via James Snow Parkway and Britannia Road
-- Area page for amenities: shopping on Derry/401 corridors, Milton Sports Centre, escarpment trails, planned village square
+## Commute (approximate, traffic-dependent)
+- Highway 401: ~3–5 min via James Snow Parkway
+- Milton GO to Toronto Union: ~8–10 min drive to station; train ~55–65 min
+- Pearson Airport (YYZ): ~25–30 min
+- Downtown Toronto by car: ~45–55 min (~55 km)
+
+## Recreation
+- Mattamy National Cycling Centre: ~5–8 min (UCI Class 1 velodrome)
+- Milton Education Village: 162 ha planned adjacent to Britannia Road
+- Conservation Halton: Hilton Falls (33.5 km trails), Kelso (22+ km), Rattlesnake Point, Crawford Lake

@@ -2,26 +2,26 @@ import {
   HCDSB_SCHOOL_FINDER,
   HDSB_FIND_SCHOOL,
   HDSB_SCHOOL_LOCATOR,
-  locationDisclaimer,
-  nearbySchools,
+  hcdsbElementarySchools,
+  hcdsbSecondarySchools,
+  hdsbElementarySchools,
+  hdsbSecondarySchools,
 } from "@/data/location";
+import { DISTANCE_DISCLAIMER } from "@/lib/site";
+import GeoDataTable from "./GeoDataTable";
 import styles from "./AreaGuide.module.css";
 
-type AreaSchoolsSectionProps = {
-  compact?: boolean;
-};
-
-export default function AreaSchoolsSection({ compact = false }: AreaSchoolsSectionProps) {
-  const schools = compact ? nearbySchools.slice(0, 6) : nearbySchools;
-
+export default function AreaSchoolsSection() {
   return (
     <section className={styles.section} aria-labelledby="schools-heading">
       <div className="container">
         <h2 id="schools-heading">What schools are near The Enclave Milton?</h2>
         <p className="lead">
-          Halton assigns schools by home address — use official board tools before you buy. The Enclave
-          master plan includes a future elementary school site (HDSB coordination); established Milton
-          public and Catholic schools are within driving distance today.
+          Both Halton District School Board (public English) and Halton Catholic District School Board
+          serve Milton families. Craig Kielburger Secondary (~8 min) is the nearest public high school
+          with IB programming. Bishop P.F. Reding Catholic Secondary (~10 min) is Milton&apos;s
+          highest-scoring Catholic secondary. HDSB plans Milton SE #13 Public School for southeast
+          Milton growth in the Britannia Secondary Plan.
         </p>
         <div className={styles.links}>
           <a href={HDSB_SCHOOL_LOCATOR} rel="noopener noreferrer">
@@ -34,32 +34,36 @@ export default function AreaSchoolsSection({ compact = false }: AreaSchoolsSecti
             HCDSB school finder
           </a>
         </div>
-        <div className={styles.cardGrid}>
-          {schools.map((s) => (
-            <article key={s.name} className={styles.card}>
-              <p className={styles.meta}>
-                {s.board} · {s.grades}
-              </p>
-              <h3>
-                {s.website ? (
-                  <a href={s.website} rel="noopener noreferrer">
-                    {s.name}
-                  </a>
-                ) : (
-                  s.name
-                )}
-              </h3>
-              <p className={styles.note}>{s.type} — {s.note}</p>
-              {!compact && <p className={styles.buyerNote}>{s.buyerNote}</p>}
-            </article>
-          ))}
-        </div>
-        {compact && (
-          <p className={styles.note} style={{ marginTop: "1rem" }}>
-            Plus additional HDSB and HCDSB schools — see the full schools &amp; area guide.
-          </p>
-        )}
-        <p className={styles.disclaimer}>{locationDisclaimer}</p>
+
+        <h3 className={styles.boardTitle}>Halton District School Board — elementary (JK–8)</h3>
+        <GeoDataTable
+          variant="school"
+          rows={hdsbElementarySchools}
+          caption="HDSB elementary schools near The Enclave Milton"
+        />
+
+        <h3 className={styles.boardTitle}>Halton District School Board — secondary (9–12)</h3>
+        <GeoDataTable
+          variant="school"
+          rows={hdsbSecondarySchools}
+          caption="HDSB secondary schools near The Enclave Milton"
+        />
+
+        <h3 className={styles.boardTitle}>Halton Catholic District School Board — elementary (JK–8)</h3>
+        <GeoDataTable
+          variant="school"
+          rows={hcdsbElementarySchools}
+          caption="HCDSB elementary schools near The Enclave Milton"
+        />
+
+        <h3 className={styles.boardTitle}>Halton Catholic District School Board — secondary (9–12)</h3>
+        <GeoDataTable
+          variant="school"
+          rows={hcdsbSecondarySchools}
+          caption="HCDSB secondary schools near The Enclave Milton"
+        />
+
+        <p className={styles.disclaimer}>{DISTANCE_DISCLAIMER}</p>
       </div>
     </section>
   );
