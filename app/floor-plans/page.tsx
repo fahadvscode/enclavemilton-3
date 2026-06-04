@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import ModelGrid from "@/components/ModelGrid";
 import CtaBand from "@/components/CtaBand";
@@ -26,7 +27,8 @@ export default function FloorPlansPage() {
           <p className="lead">
             Every Sundial Homes layout at Britannia Road — five Village back-to-back models and ten
             Park traditional two- and three-storey towns. Select a model or register for the full
-            package.
+            package.{" "}
+            <Link href="/schools-and-area">Schools, commute &amp; amenities guide</Link>.
           </p>
         </div>
       </div>

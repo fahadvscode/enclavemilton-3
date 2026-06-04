@@ -1,9 +1,8 @@
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
+import { AREA_FAQ, type FaqItem } from "@/data/area-faq";
 
-export const HOME_FAQ: FaqItem[] = [
+export type { FaqItem };
+
+export const PRODUCT_FAQ: FaqItem[] = [
   {
     question: "What is The Enclave Milton?",
     answer:
@@ -94,14 +93,7 @@ export const HOME_FAQ: FaqItem[] = [
     answer:
       "No. This is an independent marketing site for The Enclave Milton and is not the builder's official sales office. Sundial Homes operates sundialhomes.com — confirm all pricing, features, and availability directly with the builder.",
   },
-  {
-    question: "What schools are near The Enclave Milton?",
-    answer:
-      "The master plan includes a future on-site elementary school (subject to Halton District School Board approval). Nearby established schools include Viola Desmond, Ethel Gardiner, Hawthorne Village, Craig Kielburger, Milton District, and Catholic secondary options — verify catchment for your lot.",
-  },
-  {
-    question: "How is the commute to Toronto and highways?",
-    answer:
-      "Britannia Road connects to James Snow Parkway and regional routes toward Highway 401 and Highway 407. Milton GO Station on the Kitchener line offers Union-bound service for commuters — drive times vary with traffic.",
-  },
 ];
+
+/** Full FAQ for homepage schema and /schools-and-area page */
+export const HOME_FAQ: FaqItem[] = [...PRODUCT_FAQ, ...AREA_FAQ];

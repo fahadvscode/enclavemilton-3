@@ -19,6 +19,7 @@ export default function TopNav() {
         </Link>
         <nav className={styles.nav} aria-label="Primary">
           <Link href="/floor-plans">Floor plans</Link>
+          <Link href="/schools-and-area">Schools &amp; area</Link>
           <a href="#register" className={styles.cta}>
             Get pricing
           </a>

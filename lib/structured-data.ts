@@ -205,3 +205,18 @@ export function modelPageGraph(
 export function modelSqftForSchema(model: ReturnType<typeof getAllModels>[number]) {
   return formatSqft(model);
 }
+
+export function areaPageGraph() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Schools, commute, and amenities near The Enclave Milton",
+    url: `${SITE_URL}/schools-and-area`,
+    description:
+      "Guide to Halton schools, Milton GO, highways, shopping, and recreation near The Enclave Milton on Britannia Road, Milton, Ontario.",
+    dateModified: BUILD_DATE,
+    inLanguage: "en-CA",
+    isPartOf: { "@id": IDS.website },
+    about: { "@id": IDS.place },
+  };
+}

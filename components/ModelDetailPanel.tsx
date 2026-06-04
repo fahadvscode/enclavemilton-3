@@ -60,7 +60,9 @@ export default function ModelDetailPanel({ model, collection }: ModelDetailPanel
             </div>
           </dl>
           <p>
-            <Link href="/floor-plans">← All 15 floor plans at The Enclave Milton</Link>
+            <Link href="/floor-plans">← All 15 floor plans</Link>
+            {" · "}
+            <Link href="/schools-and-area">Schools &amp; area guide</Link>
           </p>
         </div>
         <div id={`register-${model.slug}`} className={styles.form}>

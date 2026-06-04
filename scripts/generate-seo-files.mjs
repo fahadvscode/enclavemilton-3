@@ -73,6 +73,19 @@ ${faqBlock}
 - Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
 - Sundial Homes builder
 - From $599,990; 15 layouts; occupancy 2027; now selling
+
+## Schools & area guide
+- Full guide: ${SITE_URL}/schools-and-area
+- Future on-site elementary (planned, HDSB coordination)
+- Nearby public elementaries families research: Boyne, Viola Desmond, Ethel Gardiner, Hawthorne Village, E. J. James, Sam Sherratt, Tiger Jeet Singh
+- Public secondaries: Craig Kielburger, Milton District
+- Catholic (HCDSB): Lumen Christi, St. Peter, Guardian Angels, Bishop Reding, St. Benedict, Jean Vanier
+- School catchment: verify address at schoollocator.hdsb.ca and HCDSB school finder — assignments not guaranteed by marketing sites
+
+## Commute (typical ranges, traffic-dependent)
+- Milton GO Station (Kitchener line): ~10–20 min drive from Britannia area
+- Highway 401 / 407 access via James Snow Parkway and Britannia Road
+- Area page for amenities: shopping on Derry/401 corridors, Milton Sports Centre, escarpment trails, planned village square
 `;
 
 mkdirSync(join(root, "public"), { recursive: true });

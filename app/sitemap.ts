@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${SITE_URL}/schools-and-area`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
     ...models,
   ];
 }
