@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "The Enclave Milton townhomes" }],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
