@@ -93,8 +93,7 @@ export function RegistrationFormFields({
     <form
       onSubmit={handleSubmit}
       className={`${styles.form} ${variant === "home" ? styles.formHome : styles.formModal}`}
-      name={REGISTRATION_FORM_NAME}
-      aria-label={REGISTRATION_FORM_NAME}
+      aria-label="Registration form"
       noValidate
     >
       <input type="hidden" name="formName" value={REGISTRATION_FORM_NAME} />
