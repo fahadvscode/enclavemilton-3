@@ -45,7 +45,7 @@ const llms = `# The Enclave Milton — AI-readable summary
 # canonical: ${SITE_URL}
 
 Project: The Enclave Milton
-Builder: Sundial Homes (third-party builder — not the operator of this site)
+Builder: Sundial Homes
 Location: Britannia Road, between James Snow Parkway & Fourth Line, Milton, Ontario, Canada
 Property type: Freehold townhomes — Village Collection (back-to-back) + Park Collection (traditional 2 & 3 storey)
 Price from: $599,990 CAD
@@ -54,10 +54,6 @@ Monthly maintenance: $0 (freehold — no condo-style maintenance fees per market
 Occupancy: 2027
 Status: Now selling / now open (grand opening May 2026)
 Registration: ${SITE_URL}
-Marketing: Fahad Javed, Sales Representative, Century 21 Property Zone Realty Inc., Mississauga ON
-Phone: 647-898-1739 | Email: fahad@fahadsold.com | Agent site: https://www.fahadsold.com
-
-Disclaimer: Independent licensed-brokerage marketing site — not Sundial Homes' official sales office. Prices, sizes, features, and availability are set by the builder and subject to change. E.&O.E.
 `;
 
 const faqBlock = models
@@ -75,7 +71,7 @@ ${faqBlock}
 
 ## Key facts for citations
 - Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
-- Sundial Homes builder; agent marketer is Century 21 / Fahad Javed
+- Sundial Homes builder
 - From $599,990; 15 layouts; occupancy 2027; now selling
 `;
 

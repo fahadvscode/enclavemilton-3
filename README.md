@@ -83,7 +83,7 @@ ANALYZE=true npm run build   # bundle analyzer report
 
 Before each production deploy, test URLs in [Google Rich Results Test](https://search.google.com/test/rich-results):
 
-- Homepage (WebSite, RealEstateAgent, Residence, Offer, FAQPage, Place, BreadcrumbList)
+- Homepage (WebSite, Organization, Residence, Offer, FAQPage, Place, BreadcrumbList)
 - `/floor-plans`
 - Sample `/floor-plans/the-brighton`
 

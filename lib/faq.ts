@@ -12,7 +12,7 @@ export const HOME_FAQ: FaqItem[] = [
   {
     question: "Who is the builder of The Enclave Milton?",
     answer:
-      "Sundial Homes is the builder. Sundial is a third-party developer — this website is operated by licensed brokerage marketing, not by Sundial's official sales office.",
+      "Sundial Homes is the builder of The Enclave Milton — an established Ontario new-home builder delivering the Village and Park townhome collections in Milton.",
   },
   {
     question: "Where is The Enclave Milton located?",
@@ -42,7 +42,7 @@ export const HOME_FAQ: FaqItem[] = [
   {
     question: "When is occupancy or closing?",
     answer:
-      "Occupancy is currently communicated for 2027. Exact closing dates vary by model, phase, and purchase agreement — confirm timing with your sales representative at registration.",
+      "Occupancy is currently communicated for 2027. Exact closing dates vary by model, phase, and purchase agreement — confirm timing when you register for details.",
   },
   {
     question: "What sizes and storeys are offered?",
@@ -88,11 +88,6 @@ export const HOME_FAQ: FaqItem[] = [
     question: "How do I register for floor plans and pricing?",
     answer:
       "Complete the registration form on this page with your contact details and model interest. You will receive floor plan PDFs and pricing information by email — check spam if nothing arrives within a few minutes.",
-  },
-  {
-    question: "Is this the builder's official website?",
-    answer:
-      "No. This is an independent marketing site by Fahad Javed, Sales Representative, Century 21 Property Zone Realty Inc. Sundial Homes operates its own website; pricing and availability are always confirmed with the builder.",
   },
   {
     question: "What schools are near The Enclave Milton?",

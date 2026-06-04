@@ -1,22 +1,11 @@
 import { communityLocation } from "@/data/location";
 import { HOME_FAQ } from "./faq";
-import {
-  formatSqft,
-  getAllModels,
-  siteData,
-  SITE_URL,
-} from "./floor-plans";
-import {
-  BROKERAGE,
-  BUILD_DATE,
-  DEVELOPMENT_GEO,
-  SITE_NAME,
-} from "./site";
+import { formatSqft, getAllModels, siteData } from "./floor-plans";
+import { BUILD_DATE, DEVELOPMENT_GEO, SITE_NAME, SITE_URL } from "./site";
 
 const IDS = {
   website: `${SITE_URL}/#website`,
-  agent: `${SITE_URL}/#agent`,
-  org: `${SITE_URL}/#brokerage`,
+  builder: `${SITE_URL}/#builder`,
   residence: `${SITE_URL}/#residence`,
   offer: `${SITE_URL}/#offer`,
   place: `${SITE_URL}/#place`,
@@ -25,7 +14,7 @@ const IDS = {
 };
 
 const residenceDescription =
-  "The Enclave Milton is a master-planned freehold townhome community by Sundial Homes on Britannia Road in Milton, Ontario, Canada — not to be confused with similarly named projects in the United States. The development delivers two distinct product lines for Halton Region buyers: the Village Collection of back-to-back freehold townhomes without monthly maintenance fees, and the Park Collection of traditional two- and three-storey townhomes scaled for growing families. Fifteen floor plans span roughly 953 to 2,843 square feet, with pricing from $599,990 and occupancy communicated for 2027. The southeast Milton location sits between James Snow Parkway and Fourth Line with planned trails, a village square, and a future elementary school in the master plan. Buyers access Highway 401, Highway 407, and Milton GO for commuting across the GTA. This page is marketed by licensed brokerage Fahad Javed at Century 21 Property Zone Realty Inc.; Sundial Homes remains the builder and seller of record for construction contracts.";
+  "The Enclave Milton is a master-planned freehold townhome community by Sundial Homes on Britannia Road in Milton, Ontario, Canada — not to be confused with similarly named projects in the United States. The development delivers two distinct product lines for Halton Region buyers: the Village Collection of back-to-back freehold townhomes without monthly maintenance fees, and the Park Collection of traditional two- and three-storey townhomes scaled for growing families. Fifteen floor plans span roughly 953 to 2,843 square feet, with pricing from $599,990 and occupancy communicated for 2027. The location sits between James Snow Parkway and Fourth Line with planned trails, a village square, and a future elementary school in the master plan. Buyers access Highway 401, Highway 407, and Milton GO for commuting across the GTA.";
 
 export function homepageGraph() {
   const priceValidUntil = `${new Date().getFullYear() + 1}-12-31`;
@@ -39,37 +28,15 @@ export function homepageGraph() {
         url: SITE_URL,
         name: SITE_NAME,
         inLanguage: "en-CA",
-        publisher: { "@id": IDS.agent },
+        publisher: { "@id": IDS.builder },
         dateModified: BUILD_DATE,
         datePublished: BUILD_DATE,
       },
       {
-        "@type": "RealEstateAgent",
-        "@id": IDS.agent,
-        name: BROKERAGE.agentName,
-        jobTitle: BROKERAGE.jobTitle,
-        telephone: BROKERAGE.phone,
-        email: BROKERAGE.email,
-        url: BROKERAGE.url,
-        worksFor: { "@id": IDS.org },
-        areaServed: [
-          { "@type": "City", name: "Milton", containedInPlace: { "@type": "AdministrativeArea", name: "Ontario" } },
-          { "@type": "AdministrativeArea", name: "Halton Region" },
-        ],
-        sameAs: [],
-      },
-      {
-        "@type": "RealEstateOrganization",
-        "@id": IDS.org,
-        name: BROKERAGE.organization,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: BROKERAGE.streetAddress,
-          addressLocality: BROKERAGE.addressLocality,
-          addressRegion: BROKERAGE.addressRegion,
-          postalCode: BROKERAGE.postalCode,
-          addressCountry: BROKERAGE.addressCountry,
-        },
+        "@type": "Organization",
+        "@id": IDS.builder,
+        name: siteData.project.builder,
+        url: "https://www.sundialhomes.com",
       },
       {
         "@type": "SingleFamilyResidence",
@@ -104,12 +71,7 @@ export function homepageGraph() {
         priceValidUntil,
         availability: "https://schema.org/InStock",
         itemOffered: { "@id": IDS.residence },
-        seller: {
-          "@type": "Organization",
-          name: siteData.project.builder,
-          url: "https://www.sundialhomes.com",
-        },
-        offeredBy: { "@id": IDS.agent },
+        seller: { "@id": IDS.builder },
       },
       {
         "@type": "FAQPage",
@@ -152,10 +114,7 @@ export function homepageGraph() {
         startDate: "2026-05-01",
         eventStatus: "https://schema.org/EventScheduled",
         location: { "@id": IDS.place },
-        organizer: {
-          "@type": "Organization",
-          name: siteData.project.builder,
-        },
+        organizer: { "@id": IDS.builder },
       },
     ],
   };
@@ -223,7 +182,6 @@ export function modelPageGraph(
           availability: "https://schema.org/InStock",
           priceValidUntil,
           seller: { "@type": "Organization", name: siteData.project.builder },
-          offeredBy: { "@id": `${SITE_URL}/#agent` },
         },
         isRelatedTo: { "@id": `${SITE_URL}/#residence` },
       },

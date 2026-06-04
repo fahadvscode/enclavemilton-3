@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import { REGISTRATION_FORM_NAME } from "@/lib/registration-form";
 import { getRegistrationModelOptions } from "@/lib/registration-options";
 import { ALL_MODELS_VALUE } from "@/lib/registration-options";
-import { SITE_B_SOURCE, FORM_DISCLAIMER } from "@/lib/site";
+import { SITE_B_SOURCE } from "@/lib/site";
 import type { RegistrationPayload } from "@/lib/types";
 import styles from "./LeadForm.module.css";
 
@@ -158,7 +158,6 @@ export default function LeadForm({
       <button type="submit" className="btn btn--primary" disabled={status === "loading"}>
         {status === "loading" ? "Sending…" : "Get floor plans & pricing"}
       </button>
-      <p className={styles.disclaimer}>{FORM_DISCLAIMER}</p>
       {status === "error" && (
         <p className={styles.error} role="alert">
           {message}

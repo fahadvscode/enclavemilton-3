@@ -1,5 +1,4 @@
 import LeadForm from "./LeadForm";
-import { NON_REPRESENTATION_DISCLAIMER } from "@/lib/site";
 import styles from "./CtaBand.module.css";
 
 type CtaBandProps = {
@@ -20,7 +19,6 @@ export default function CtaBand({
             Register once for all 15 layouts — Village back-to-back and Park traditional townhomes
             from $599,990 with $0 monthly maintenance.
           </p>
-          <p className={styles.disclaimer}>{NON_REPRESENTATION_DISCLAIMER}</p>
         </div>
         <div className={styles.form}>
           <LeadForm idPrefix={id} />

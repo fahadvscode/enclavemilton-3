@@ -13,32 +13,12 @@
   color: #fdba74;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .brand {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
   margin: 0 0 1rem;
-}
-
-.heading {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 0.5rem;
 }
 
 .links {
@@ -51,16 +31,10 @@
   text-decoration: none;
 }
 
-.disclaimer {
+.copy {
+  margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #94a3b8;
-  margin: 0 0 1rem;
-}
-
-.copy {
   margin: 0;
   font-size: 0.8rem;
   color: #64748b;
